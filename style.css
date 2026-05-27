@@ -1,0 +1,41 @@
+:root {
+  --marinho-principal: #0d4c94;
+  --azul-secundario: #3399FF;
+  --azul-gelo: #DCEEFF;
+  --amarelo: #f5c518;
+  --branco: #ffffff;
+  --cinza-claro: #f4f6f5;
+  --cinza-texto: #4a5568;
+  --preto: #0a0a0a;
+  --fonte-titulo: 'Bebas Neue', sans-serif;
+  --fonte-corpo: 'Barlow', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(15, 70, 92, 0.12);
+}
+body {
+  font-family: var(--fonte-corpo);
+  color: var(--cinza-texto);
+  background: #fff;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5 { font-family: var(--fonte-titulo); letter-spacing: 0.02em; }
+
+.cfai-navbar {
+  background: var( --marinho-principal);
+  padding: 0.75rem 0;
+}
+.brand-cfai {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  color: var( --azul-gelo);
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+
+}
+
+.nav-link {
+  color: var(--azul-gelo) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
