@@ -1,41 +1,96 @@
+/* Criado as variaveis de cores e fontes e as implementações foram realizadas com auxilio de IA */
+
 :root {
   --marinho-principal: #0d4c94;
   --azul-secundario: #3399FF;
   --azul-gelo: #DCEEFF;
-  --amarelo: #f5c518;
+  --azul-fundo: #f1f5fa;
   --branco: #ffffff;
   --cinza-claro: #f4f6f5;
   --cinza-texto: #4a5568;
-  --preto: #0a0a0a;
   --fonte-titulo: 'Bebas Neue', sans-serif;
   --fonte-corpo: 'Barlow', sans-serif;
   --radius: 12px;
   --shadow: 0 4px 24px rgba(15, 70, 92, 0.12);
 }
 body {
-  font-family: var(--fonte-corpo);
-  color: var(--cinza-texto);
-  background: #fff;
-  margin: 0;
+    background-color: var(--azul-fundo);
+}
+header, footer {
+    background-color: var(--marinho-principal);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 10px 24px !important; 
+    border: none !important; 
+    margin-top: 20px; 
 }
 
-h1,h2,h3,h4,h5 { font-family: var(--fonte-titulo); letter-spacing: 0.02em; }
 
-.cfai-navbar {
-  background: var( --marinho-principal);
-  padding: 0.75rem 0;
-}
-.brand-cfai {
-  font-family: var(--fonte-titulo);
-  font-size: 1.8rem;
-  color: var( --azul-gelo);
-  letter-spacing: 2px;
-  transition: color 0.3s ease;
-
+header span, header a, footer span {
+    color: var(--branco) !important;
+    font-family: var(--fonte-titulo);
+    letter-spacing: 1px;
 }
 
-.nav-link {
-  color: var(--azul-gelo) !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
+header .nav-pills .nav-link {
+    color: var(--azul-gelo) !important; 
+    font-family: var(--fonte-corpo);
+    font-weight: 500;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+
+header .nav-pills .nav-link:hover {
+    color: var(--branco) !important;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+header .nav-pills .nav-link.active {
+    background-color: var(--azul-secundario) !important;
+    color: var(--branco) !important;
+    font-weight: bold;
+}
+
+
+footer svg {
+    fill: var(--azul-gelo); 
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover svg {
+    fill: var(--azul-secundario);
+    transform: translateY(-3px); 
+}
+
+
+
+
+#myCarousel {
+    max-width: 1296px; 
+    margin: 0 auto 40px auto; 
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; 
+}
+
+
+#myCarousel .carousel-item img {
+    object-fit: cover;
+    height: 600px; 
+    width: 100%;
+}
+
+
+#myCarousel .carousel-indicators [data-bs-target] {
+    background-color: var(--azul-gelo);
+    height: 5px; 
+    border-radius: 4px; 
+    opacity: 0.6;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#myCarousel .carousel-indicators .active {
+    background-color: var(--azul-secundario);
+    opacity: 1;
 }
